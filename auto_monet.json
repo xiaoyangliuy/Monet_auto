@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Hexapod X",
+        "pv": "7bmbHXP:m2"
+    },
+    {
+        "name": "Hexapod Y",
+        "pv": "7bmbHXP:m3"
+    },
+    {
+        "name": "Hex Base Y",
+        "pv": "7bmb1:m26"
+    },
+    {
+        "name": "Sample Theta",
+        "pv": "7bmb1:aero:m3"
+    },
+    {
+        "name": "Center 0 Deg",
+        "pv": "7bmb1:m33"
+    },
+    {
+        "name": "Center 90 Deg",
+        "pv": "7bmb1:m34"
+    },
+    {   
+        "name": "Robot mount", 
+        "pv": ["7bmb1:m26","7bmbHXP:m3"],
+        "value": [100.0,0.0]
+    },
+    {
+        "name": "Sample bottom",
+        "pv": "7bmb1:m26",
+        "value": -50.0
+    },
+    {
+        "name": "Sample middle",
+        "pv": "7bmb1:m26",
+        "value": -55.0
+    },
+    {
+        "name": "Sample top",
+        "pv": ["7bmb1:m26","7bmbHXP:m3"],
+        "value": [-35.0,-10.0]
+    }
+]
