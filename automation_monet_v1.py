@@ -13,6 +13,7 @@ start_pos = 0.0
 #loop among cores (based on position in robot tray)
 for p in pos:
     #check mounting position for all pvs
+    print(f"start {cores_pre}{p} now") 
     if "Hexapod X" in pv_input:
         caput(pv_input["Hexapod X"]["pv"], start_pos, wait=True, timeout=20)
         time.sleep(0.2)
