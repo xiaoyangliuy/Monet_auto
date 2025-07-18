@@ -19,8 +19,8 @@ if "Hexapod X" in pv_input:
         print(f"Hexapod X not at mount position after caput")
         sys.exit(1)
 
-if "Robot Mount" in pv_input:
-    for pv, val in zip(pv_input["Robot Mount"]["pv"], pv_input["Robot Mount"]["value"]):
+if "Robot mount" in pv_input:
+    for pv, val in zip(pv_input["Robot mount"]["pv"], pv_input["Robot mount"]["value"]):
         if abs(caget(pv) - val) > 1e-3:
             if pv == "7bmb1:m26":
                 caput(pv, val, wait=True, timeout=240)
@@ -55,14 +55,18 @@ if "Center 90 Deg" in pv_input:
 time.sleep(0.5)
 
 #robot mount sample
-if caget("MONET:CurrentSample") != 'None':
-    print("ERROR: Cannot mount new sample.")
-    sys.exit(1)
-
-
 caput("MONET:SampleToMount", "Core_18")
 time.sleep(1)   
 caput("MONET:MountSample", 1)
+
+wait_time = 60
+wait_time_complete = 0
+while caget("MONET:MovementStatus") != "Idle":
+    time.sleep(1)
+    wait_time_complete += 1
+    if wait_time_complete > wait_time:
+        print("ERROR: Mount Sample did not complete in time")
+        sys.exit(1)
 
 if caget("MONET:CurrentSample") != 'Core_18':
     print("ERROR: Could not update CurrentSample PV")
@@ -75,7 +79,7 @@ if "Sample bottom" in pv_input:
     caput(pv_input["Sample bottom"]["pv"], target_bottom, wait=True, timeout=150)
     time.sleep(0.2)
     print(f"Hex Base Y moved to bottom position relatively {pv_input["Sample bottom"]["value"]} mm")
-    if abs(caget(pv_input["Sample bottom"]["pv"]) - 0.0) > 1e-3: 
+    if abs(caget(pv_input["Sample bottom"]["pv"]) - target_bottom) > 1e-3: 
         print("Hex Base Y not at bottom position after caput")
         sys.exit(1)
 time.sleep(5)
@@ -88,7 +92,7 @@ if "Sample middle" in pv_input:
     caput(pv_input["Sample middle"]["pv"], target_middle, wait=True, timeout=150)
     time.sleep(0.2)
     print(f"Hex Base Y moved to middle position relatively {pv_input["Sample middle"]["value"]} mm")
-    if abs(caget(pv_input["Sample middle"]["pv"]) - 0.0) > 1e-3: 
+    if abs(caget(pv_input["Sample middle"]["pv"]) - target_middle) > 1e-3: 
         print("Hex Base Y not at middle position after caput")
         sys.exit(1)
 time.sleep(5)
@@ -119,8 +123,8 @@ if "Hexapod X" in pv_input:
         print(f"Hexapod X not at mount position after caput")
         sys.exit(1)
 
-if "Robot Mount" in pv_input:
-    for pv, val in zip(pv_input["Robot Mount"]["pv"], pv_input["Robot Mount"]["value"]):
+if "Robot mount" in pv_input:
+    for pv, val in zip(pv_input["Robot mount"]["pv"], pv_input["Robot mount"]["value"]):
         if pv == "7bmb1:m26":
             caput(pv, val, wait=True, timeout=240)
         else:
@@ -163,4 +167,4 @@ caput("MONET:DismountSample", 1)
 if caget("MONET:CurrentSample") != 'None':
     print("ERROR: Could not update CurrentSample PV")
     sys.exit(1)
-
+print("wow success")
