@@ -55,14 +55,18 @@ if "Center 90 Deg" in pv_input:
 time.sleep(0.5)
 
 #robot mount sample
-if caget("MONET:CurrentSample") != 'None':
-    print("ERROR: Cannot mount new sample.")
-    sys.exit(1)
-
-
 caput("MONET:SampleToMount", "Core_18")
 time.sleep(1)   
 caput("MONET:MountSample", 1)
+
+wait_time = 60
+wait_time_complete = 0
+while caget("MONET:MovementStatus") != "Idle":
+    time.sleep(1)
+    wait_time_complete += 1
+    if wait_time_complete > wait_time:
+        print("ERROR: Mount Sample did not complete in time")
+        sys.exit(1)
 
 if caget("MONET:CurrentSample") != 'Core_18':
     print("ERROR: Could not update CurrentSample PV")
