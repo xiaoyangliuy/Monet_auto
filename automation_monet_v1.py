@@ -5,42 +5,55 @@ import sys
 import subprocess
 
 #load pvs and valeus
-#with open("auto_monet.json", "r") as f:
-#    pv_input = json.load(f)
+with open("auto_monet.json", "r") as f:
+    pv_input = json.load(f)
 
+start_pos = 0.0
 #loop among cores (based on position in robot tray)
 
-
 #check mounting position for all pvs
-if abs(caget("7bmbHXP:m2") - 0.0) > 1e-3:   
-    print("Hexapod X not 0")
-    sys.exit(1)
-pvs = ["7bmb1:m26","7bmbHXP:m3"]
-vals = [100.0, 0.0]
-for pv, val in zip(pvs, vals):
-    if pv == "7bmb1:m26":
-        caput(pv, val, wait=True, timeout=240)
-    else:
-        caput(pv, val, wait=True, timeout=10)
-    print(f"{pv} moved to robot mount position at {val} mm")
-    time.sleep(0.5)
-    if abs(caget(pv) - val) > 1e-3:
-        print(f"{pv} not at mount position after caput")
+if "Hexapod X" in pv_input:
+    caput(pv_input["Hexapod X"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Hexapod X"]["pv"]) - start_pos) > 1e-3:
+        print(f"Hexapod X not at mount position after caput")
         sys.exit(1)
-    
-if abs(caget("7bmb1:aero:m3") - 0.0) > 1e-3: 
-    print("Sample Theta not 0")
-    sys.exit(1)
 
-if abs(caget("7bmb1:m33") - 0.0) > 1e-3: 
-    print("Center 0 Deg not 0")
-    sys.exit(1)
+if "Robot Mount" in pv_input:
+    for pv, val in zip(pv_input["Robot Mount"]["pv"], pv_input["Robot Mount"]["value"]):
+        if abs(caget(pv) - val) > 1e-3:
+            if pv == "7bmb1:m26":
+                caput(pv, val, wait=True, timeout=240)
+            else:
+                caput(pv, val, wait=True, timeout=20)
+        time.sleep(0.2)
+        if abs(caget(pv) - val) > 1e-3:
+            print(f"{pv} not at mount position after caput")
+            sys.exit(1)
 
-if abs(caget("7bmb1:m34") - 0.0) > 1e-3: 
-    print("Center 90 Deg not 0")
-    sys.exit(1)
+if "Sample Theta" in pv_input:
+    caput(pv_input["Sample Theta"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Sample Theta"]["pv"]) - start_pos) > 1e-3: 
+        print("Sample Theta not at mount position after caput")
+        sys.exit(1)   
 
-time.sleep(1)
+if "Center 0 Deg" in pv_input:
+    caput(pv_input["Center 0 Deg"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Center 0 Deg"]["pv"]) - start_pos) > 1e-3: 
+        print("Center 0 Deg not at mount position after caput")
+        sys.exit(1)
+
+if "Center 90 Deg" in pv_input:
+    caput(pv_input["Center 90 Deg"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Center 90 Deg"]["pv"]) - start_pos) > 1e-3: 
+        print("Center 90 Deg not at mount position after caput")
+        sys.exit(1)
+
+time.sleep(0.5)
+
 #robot mount sample
 if caget("MONET:CurrentSample") != 'None':
     print("ERROR: Cannot mount new sample.")
@@ -56,79 +69,85 @@ if caget("MONET:CurrentSample") != 'Core_18':
     sys.exit(1)
 
 #move to bottom position (50 mm away)
-
-c_hexbasey = caget("7bmb1:m26")
-target_bottom = c_hexbasey + (-50.0)
-caput("7bmb1:m26", target_bottom, wait=True, timeout=60)
-print(f"Hex Base Y moved to bottom position relatively -50 mm")
-if abs(caget("7bmb1:m26") - 0.0) > 1e-3: 
-    print("Hex Base Y not at bottom position after caput")
-    sys.exit(1)
+if "Sample bottom" in pv_input:
+    c_hexbasey = caget(pv_input['Sample bottom']['pv'])
+    target_bottom = c_hexbasey + pv_input["Sample bottom"]["value"]
+    caput(pv_input["Sample bottom"]["pv"], target_bottom, wait=True, timeout=150)
+    time.sleep(0.2)
+    print(f"Hex Base Y moved to bottom position relatively {pv_input["Sample bottom"]["value"]} mm")
+    if abs(caget(pv_input["Sample bottom"]["pv"]) - 0.0) > 1e-3: 
+        print("Hex Base Y not at bottom position after caput")
+        sys.exit(1)
 time.sleep(5)
 #do tomoscan
 
 #move to middle position (55 mm away)
-c_hexbasey = caget("7bmb1:m26")
-target_middle = c_hexbasey + (-55.0)
-caput("7bmb1:m26", target_middle, wait=True, timeout=70)
-print(f"Hex Base Y moved to bottom position relatively -55.0 mm")
-if abs(caget("7bmb1:m26") - 0.0) > 1e-3: 
-    print("Hex Base Y not at middle position after caput")
-    sys.exit(1)
+if "Sample middle" in pv_input:
+    c_hexbasey = caget(pv_input['Sample middle']['pv'])
+    target_middle = c_hexbasey + pv_input["Sample middle"]["value"]
+    caput(pv_input["Sample middle"]["pv"], target_middle, wait=True, timeout=150)
+    time.sleep(0.2)
+    print(f"Hex Base Y moved to middle position relatively {pv_input["Sample middle"]["value"]} mm")
+    if abs(caget(pv_input["Sample middle"]["pv"]) - 0.0) > 1e-3: 
+        print("Hex Base Y not at middle position after caput")
+        sys.exit(1)
 time.sleep(5)
 
 #move to top position (45 mm away)
-vals_2 = [-35.0, -10.0]
-for pv, val in zip(pvs,vals_2):
-    c_pv = caget(pv)
-    target_top = c_pv + val
-    caput(pv, target_top, wait=True, timeout=50)
-    print(f"{pv} moved to top position relatively {val} mm")
-    time.sleep(0.5)
-    if abs(caget(pv) - 0.0) > 1e-3:
-        print(f"{pv} not at top position after caput")
-        sys.exit(1) 
+if "Sample top" in pv_input:
+    for pv, val in zip(pv_input["Sample top"]["pv"], pv_input["Sample top"]["value"]):
+        c_pos = caget(pv)
+        target_top = c_pos + val
+        if pv == "7bmb1:m26":
+            caput(pv, target_top, wait=True, timeout=240)
+        else:
+            caput(pv, target_top, wait=True, timeout=30)
+        time.sleep(0.2)
+        print(f"{pv} moved to top position relatively {val} mm")
+        if abs(caget(pv) - target_top) > 1e-3:
+            print(f"Sample top {pv} not at top position after caput")
+            sys.exit(1)
 time.sleep(5)
 
 #do tomoscan
 
 #move to mount position for sample unmount
-if abs(caget("7bmbHXP:m2") - 0.0) > 1e-3:   
-    caput("7bmbHXP:m2", 0.0, wait=True, timeout=10)
-    print("Hexapod X moved to mount position at 0.0 mm")
-    if abs(caget("7bmbHXP:m2") - 0.0) > 1e-3: 
-        print("Hexapod X not at mount position after caput")
+if "Hexapod X" in pv_input:
+    caput(pv_input["Hexapod X"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Hexapod X"]["pv"]) - start_pos) > 1e-3:
+        print(f"Hexapod X not at mount position after caput")
         sys.exit(1)
 
-for pv, val in zip(pvs, vals):
-    if pv == "7bmb1:m26":
-        caput(pv, val, wait=True, timeout=240)
-    else:
-        caput(pv, val, wait=True, timeout=10)
-    print(f"{pv} moved to robot mount position at {val} mm")
-    time.sleep(0.5)
-    if abs(caget(pv) - val) > 1e-3:
-        print(f"{pv} not at mount position after caput")
-        sys.exit(1)
-    
-if abs(caget("7bmb1:aero:m3") - 0.0) > 1e-3: 
-    caput("7bmb1:aero:m3", 0.0, wait=True, timeout=10)
-    print("Sample Theta moved to mount position at 0.0 deg")
-    if abs(caget("7bmb1:aero:m3") - 0.0) > 1e-3: 
+if "Robot Mount" in pv_input:
+    for pv, val in zip(pv_input["Robot Mount"]["pv"], pv_input["Robot Mount"]["value"]):
+        if pv == "7bmb1:m26":
+            caput(pv, val, wait=True, timeout=240)
+        else:
+            caput(pv, val, wait=True, timeout=20)
+        time.sleep(0.2)
+        if abs(caget(pv) - val) > 1e-3:
+            print(f"Robot mount {pv} not at mount position after caput")
+            sys.exit(1)
+
+if "Sample Theta" in pv_input:
+    caput(pv_input["Sample Theta"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Sample Theta"]["pv"]) - start_pos) > 1e-3: 
         print("Sample Theta not at mount position after caput")
-        sys.exit(1)
+        sys.exit(1)   
 
-if abs(caget("7bmb1:m33") - 0.0) > 1e-3: 
-    caput("7bmb1:m33", 0.0, wait=True, timeout=10)
-    print("Center 0 Deg moved to mount position at 0.0 deg")
-    if abs(caget("7bmb1:m33") - 0.0) > 1e-3: 
+if "Center 0 Deg" in pv_input:
+    caput(pv_input["Center 0 Deg"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Center 0 Deg"]["pv"]) - start_pos) > 1e-3: 
         print("Center 0 Deg not at mount position after caput")
         sys.exit(1)
 
-if abs(caget("7bmb1:m34") - 0.0) > 1e-3: 
-    caput("7bmb1:m34", 0.0, wait=True, timeout=10)
-    print("Center 90 Deg moved to mount position at 0.0 deg")
-    if abs(caget("7bmb1:m34") - 0.0) > 1e-3: 
+if "Center 90 Deg" in pv_input:
+    caput(pv_input["Center 90 Deg"]["pv"], start_pos, wait=True, timeout=20)
+    time.sleep(0.2)
+    if abs(caget(pv_input["Center 90 Deg"]["pv"]) - start_pos) > 1e-3: 
         print("Center 90 Deg not at mount position after caput")
         sys.exit(1)
 time.sleep(1)
