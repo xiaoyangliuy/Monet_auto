@@ -237,6 +237,7 @@ for p in pos:
     time.sleep(1)
     caput("MONET:DismountSample", 1)
     time.sleep(2)
+<<<<<<< HEAD
 
     while caget("MONET:MovementStatus") != "Idle":
         time.sleep(1)
@@ -250,5 +251,12 @@ for p in pos:
         print("ERROR 2: Could not update CurrentSample PV")
         #sys.exit(1)
 
+=======
+
+    if caget("MONET:CurrentSample") != 'None':
+        print("ERROR: Could not update CurrentSample PV")
+        #sys.exit(1)
+    
+>>>>>>> 31c0db54958490fce126f468a6b6f4669f5e7b13
     print(f"Sample {cores_pre}{p} dismounted successfully")
     print(f"✅ Success {cores_pre}{p} ✅")
