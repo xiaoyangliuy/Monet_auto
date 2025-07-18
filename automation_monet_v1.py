@@ -166,9 +166,11 @@ for p in pos:
 
     time.sleep(1)   
     caput("MONET:DismountSample", 1)
+    time.sleep(2)
 
     if caget("MONET:CurrentSample") != 'None':
         print("ERROR: Could not update CurrentSample PV")
-        sys.exit(1)
+        #sys.exit(1)
+    
     print(f"Sample {cores_pre}{p} dismounted successfully")
     print(f"Success {cores_pre}{p}")
