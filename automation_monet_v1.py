@@ -14,9 +14,10 @@ cmd = ["tomoscan",
        "--scan-type","single",
        "--tomoscan-prefix", "7bmtomo:TomoScan:"
        ]
-end_name = 'test'
+end_name = 'real_test'
 #loop among cores (based on position in robot tray)
 for p in pos:
+    caput("7bma1:rShtrA:Open", 1, wait=True, timeout=20)
     #check mounting position for all pvs
     print(f"start {cores_pre}{p} now") 
     if "Hexapod X" in pv_input:
@@ -85,7 +86,6 @@ for p in pos:
         print("ERROR 1: Could not update CurrentSample PV")
         #sys.exit(1)
     print(f"Sample {cores_pre}{p} mounted successfully")
-
     #move to bottom position (50 mm away)
     if "Sample bottom" in pv_input:
         c_hexbasey = caget(pv_input['Sample bottom']['pv'])
@@ -97,6 +97,10 @@ for p in pos:
             print("Hex Base Y not at bottom position after caput")
             sys.exit(1)
         time.sleep(0.5)
+        caput("7bma1:rShtrA:Close", 1, wait=True, timeout=20)
+        print("shutter closed for scan")
+        time.sleep(5)
+
     	#do tomoscan
         fn = f"{cores_pre}{p}_bottom_{end_name}"
         caput("7bmtomo:TomoScan:FileName",fn, wait=True, timeout=30)
@@ -149,7 +153,7 @@ for p in pos:
             print(f"✅ TomoScan {fn} completed.\n")
         else:
             print(f"❌ Error in scan {fn}:\n{result.stderr}\n")
-        time.sleep(50) #wait for FDT
+        time.sleep(30) #wait for FDT
 
     #move to top position (45 mm away)
     if "Sample top" in pv_input:
@@ -186,7 +190,7 @@ for p in pos:
             print(f"✅ TomoScan {fn} completed.\n")
         else:
             print(f"❌ Error in scan {fn}:\n{result.stderr}\n")
-        time.sleep(50) #wait for FDT
+        time.sleep(30) #wait for FDT
 
     #move to mount position for sample unmount
     if "Hexapod X" in pv_input:
@@ -228,6 +232,8 @@ for p in pos:
             print("Center 90 Deg not at mount position after caput")
             sys.exit(1)
     time.sleep(1)
+    caput("7bma1:rShtrA:Open", 1, wait=True, timeout=20)
+    print("shutter open for mount")
 
     #robot mount sample
     if caget("MONET:CurrentSample") == 'None':
@@ -237,7 +243,6 @@ for p in pos:
     time.sleep(1)
     caput("MONET:DismountSample", 1)
     time.sleep(2)
-<<<<<<< HEAD
 
     while caget("MONET:MovementStatus") != "Idle":
         time.sleep(1)
@@ -251,12 +256,7 @@ for p in pos:
         print("ERROR 2: Could not update CurrentSample PV")
         #sys.exit(1)
 
-=======
-
-    if caget("MONET:CurrentSample") != 'None':
-        print("ERROR: Could not update CurrentSample PV")
-        #sys.exit(1)
-    
->>>>>>> 31c0db54958490fce126f468a6b6f4669f5e7b13
     print(f"Sample {cores_pre}{p} dismounted successfully")
     print(f"✅ Success {cores_pre}{p} ✅")
+
+print("finish the loop")
