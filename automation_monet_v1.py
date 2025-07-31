@@ -4,22 +4,35 @@ import time
 import sys
 import subprocess
 import numpy as np
+
 #load pvs and valeus
 with open("auto_monet.json", "r") as f:
     pv_input = json.load(f)
+sample_pos = np.genfromtxt(pv_input["sample_file"]["value"], delimiter=',', dtype=None, names=True, encoding=None)
+core_name = sample_pos['Sample'].tolist()
+pos = sample_pos['robot_pos'].tolist()
 cores_pre = 'Core_'
-pos = np.arange(16,19)
 start_pos = 0.0
 cmd = ["tomoscan",
        "--scan-type","single",
        "--tomoscan-prefix", "7bmtomo:TomoScan:"
        ]
-end_name = 'real_test'
+pre_name = pv_input["scan_name_pre"]["value"]
+end_name = pv_input["scan_name_end"]["value"]
+
+#filepath = caget("7bmtomo:TomoScan:FilePath")
+#if isinstance(filepath, (list, tuple)) or hasattr(filepath, '__iter__'):
+#    value = ''.join(chr(c) for c in filepath if c !=0).strip()
+#else:
+#    value=str(filepath).strip()
+#log = open(f'{filepath}/auto_monet_log.txt', 'a')
+
 #loop among cores (based on position in robot tray)
-for p in pos:
+for i,p in enumerate(pos):
+    caput("7bmSP1:cam1:AcquireTime", 0.001, wait=True, timeout=10)
     caput("7bma1:rShtrA:Open", 1, wait=True, timeout=20)
     #check mounting position for all pvs
-    print(f"start {cores_pre}{p} now") 
+    print(f"start {cores_pre}{core_name[i]} now") 
     if "Hexapod X" in pv_input:
         caput(pv_input["Hexapod X"]["pv"], start_pos, wait=True, timeout=20)
         time.sleep(0.2)
@@ -102,8 +115,9 @@ for p in pos:
         time.sleep(5)
 
     	#do tomoscan
-        fn = f"{cores_pre}{p}_bottom_{end_name}"
+        fn = f"{pre_name}{core_name[i]}_pos{p}_bottom_{end_name}"
         caput("7bmtomo:TomoScan:FileName",fn, wait=True, timeout=30)
+        time.sleep(1)
         input_name = caget("7bmtomo:TomoScan:FileName")
         if isinstance(input_name, (list, tuple)) or hasattr(input_name, '__iter__'):
             value = ''.join(chr(c) for c in input_name if c !=0).strip()
@@ -118,6 +132,7 @@ for p in pos:
 
         if result.returncode == 0:
             print(f"✅ TomoScan {fn} completed.\n")
+            #log.write(f"✅ {fn} scan completed.\n")
         else:
             print(f"❌ Error in scan {fn}:\n{result.stderr}\n")
         time.sleep(50) #time to do FDT
@@ -134,9 +149,9 @@ for p in pos:
             sys.exit(1)
         time.sleep(0.5)
         #do tomoscan
-        fn = f"{cores_pre}{p}_middle_{end_name}"
+        fn = f"{cores_pre}{core_name[i]}_pos{p}_middle_{end_name}"
         caput("7bmtomo:TomoScan:FileName",fn, wait=True, timeout=30)
-
+        time.sleep(1)
         input_name = caget("7bmtomo:TomoScan:FileName")
         if isinstance(input_name, (list, tuple)) or hasattr(input_name, '__iter__'):
             value = ''.join(chr(c) for c in input_name if c !=0).strip()
@@ -153,7 +168,7 @@ for p in pos:
             print(f"✅ TomoScan {fn} completed.\n")
         else:
             print(f"❌ Error in scan {fn}:\n{result.stderr}\n")
-        time.sleep(30) #wait for FDT
+        time.sleep(35) #wait for FDT
 
     #move to top position (45 mm away)
     if "Sample top" in pv_input:
@@ -171,9 +186,9 @@ for p in pos:
                 sys.exit(1)
         time.sleep(0.5)
         #do tomoscan
-        fn = f"{cores_pre}{p}_top_{end_name}"
+        fn = f"{cores_pre}{core_name[i]}_pos{p}_top_{end_name}"
         caput("7bmtomo:TomoScan:FileName",fn, wait=True, timeout=30)
-
+        time.sleep(1)
         input_name = caget("7bmtomo:TomoScan:FileName")
         if isinstance(input_name, (list, tuple)) or hasattr(input_name, '__iter__'):
             value = ''.join(chr(c) for c in input_name if c !=0).strip()
@@ -232,6 +247,7 @@ for p in pos:
             print("Center 90 Deg not at mount position after caput")
             sys.exit(1)
     time.sleep(1)
+    caput("7bmSP1:cam1:AcquireTime", 0.001, wait=True, timeout=10)
     caput("7bma1:rShtrA:Open", 1, wait=True, timeout=20)
     print("shutter open for mount")
 

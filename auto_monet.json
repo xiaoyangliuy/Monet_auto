@@ -19,7 +19,7 @@
     },
     "Robot mount":{ 
         "pv": ["7bmb1:m26","7bmbHXP:m3"],
-        "value": [100.0,0.0]
+        "value": [100.6,0.0]
     },
     "Sample bottom":{
         "pv": "7bmb1:m26",
@@ -32,5 +32,14 @@
     "Sample top":{
         "pv": ["7bmb1:m26","7bmbHXP:m3"],
         "value": [-35.0,-10.0]
+    },
+    "sample_file":{
+        "value": "C://Research//OneDrive - Argonne National Laboratory//anl//github//Monet_auto//Monet_auto//sample_list.csv"
+    },
+    "scan_name_pre":{
+        "value": "monet_"
+    },
+    "scan_name_end":{
+        "value": "_newimgsys_prop405_exp0p05"
     }
 }
