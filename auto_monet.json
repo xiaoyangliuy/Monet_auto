@@ -17,9 +17,13 @@
     "Center 90 Deg":{
         "pv": "7bmb1:m34"
     },
-    "Robot mount":{ 
+    "Robot Y mount":{ 
         "pv": ["7bmb1:m26","7bmbHXP:m3"],
         "value": [100.6,0.0]
+    },
+    "Robot mount rest motors":{
+        "pv": ["7bmbHXP:m2","7bmb1:aero:m3","7bmb1:m33","7bmb1:m34"],
+        "value": [0,0,0.0,0.0,0.0]
     },
     "Sample bottom":{
         "pv": "7bmb1:m26",
@@ -34,12 +38,12 @@
         "value": [-35.0,-10.0]
     },
     "sample_file":{
-        "value": "C://Research//OneDrive - Argonne National Laboratory//anl//github//Monet_auto//Monet_auto//sample_list.csv"
+        "value": "/data/2025-07-Evans-1009150/Monet_auto/sample_list.csv"
     },
     "scan_name_pre":{
         "value": "monet_"
     },
     "scan_name_end":{
-        "value": "_newimgsys_prop405_exp0p05"
+        "value": "newimgsys_prop405_exp0p05"
     }
 }

@@ -100,12 +100,19 @@ for i,p in enumerate(pos):
         #sys.exit(1)
     print(f"Sample {cores_pre}{p} mounted successfully")
     #move to bottom position (50 mm away)
+    if p == 12:
+        caput("7bmtomo:TomoScan:ExposureTime",0.01, wait=True, timeout=10)
+        time.sleep(1)
+    else:
+        caput("7bmtomo:TomoScan:ExposureTime",0.05, wait=True, timeout=10)
+        time.sleep(1)
+
     if "Sample bottom" in pv_input:
         c_hexbasey = caget(pv_input['Sample bottom']['pv'])
         target_bottom = c_hexbasey + pv_input["Sample bottom"]["value"]
         caput(pv_input["Sample bottom"]["pv"], target_bottom, wait=True, timeout=150)
         time.sleep(0.2)
-        print(f"Hex Base Y moved to bottom position relatively {pv_input["Sample bottom"]["value"]} mm")
+        print(f"Hex Base Y moved to bottom position relatively {pv_input['Sample bottom']['value']} mm")
         if abs(caget(pv_input["Sample bottom"]["pv"]) - target_bottom) > 1e-3: 
             print("Hex Base Y not at bottom position after caput")
             sys.exit(1)
@@ -143,7 +150,7 @@ for i,p in enumerate(pos):
         target_middle = c_hexbasey + pv_input["Sample middle"]["value"]
         caput(pv_input["Sample middle"]["pv"], target_middle, wait=True, timeout=150)
         time.sleep(0.2)
-        print(f"Hex Base Y moved to middle position relatively {pv_input["Sample middle"]["value"]} mm")
+        print(f"Hex Base Y moved to middle position relatively {pv_input['Sample middle']['value']} mm")
         if abs(caget(pv_input["Sample middle"]["pv"]) - target_middle) > 1e-3: 
             print("Hex Base Y not at middle position after caput")
             sys.exit(1)
