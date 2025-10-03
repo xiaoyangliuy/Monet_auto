@@ -59,18 +59,24 @@ class tomo_auto():
             self.robpos = self.robs[i]
         if self.sample is None or self.robpos is None:
             raise ValueError("No sample name or robot position name")
-        self.log.append(f"✅Match sample {self.sample} and robot position {self.robpos}")
+        self.log_event(f"✅Match sample {self.sample} and robot position {self.robpos}")
         return self.sample, self.robpos
     
     def get_pv_value(self,pv_name):
         """get the value of a pv"""
+        values = []
         if self.dry_run:
-            self.log_event(f"Dry run: would get value of {pv_name}")
-            return None
-        value = caget(pv_name,wait=True, timeout=30)
-        print(f"{pv_name} is at {value}")
-        self.log_event(f"{pv_name} is at {value}")
-        return value
+            for pn in pv_name:
+                value = 100 # single value
+                self.log_event(f"Dry run: would get value of {pn}, return arbitrary {value}")
+                values.append(value)
+            return values #list of values
+        else:
+            for pn in pv_name:
+                value = caget(pn,wait=True, timeout=30)
+                self.log_event(f"{pn} is at {value}")
+                values.append(value)
+        return values
     
     def log_event(self, event):
         """log an event with timestamp
@@ -82,43 +88,54 @@ class tomo_auto():
 
     def save_log(self):
         """save the log to a file and clear the log list"""
-        with open(f'{self._logpath}', 'w') as f_log:
-            json.dump(self.log, f_log, indent=4)
+        self.log_event("===========================================================================")
+        with open(f'{self._logpath}', 'a',  encoding="utf-8") as f_log:
             for line in self.log:
                 f_log.write(f"{line}\n")
             print(f"part log saved")
         self.log.clear()
     
-    def move_motor_pv(self, pv_name, target_value, scanloc=None):
-        """move a motor pv to target value
+    def move_motor_pv(self, pv_name, target_value):
+        """move a/multiple motor(s) pv to target value
         check if the motor pv is at target value within tolerance"""
+        if len(pv_name) != len(target_value):
+            raise ValueError("Motor names and values length mismatch")
         if self.dry_run:
-            self.log_event(f"Dry run: would move {pv_name} to {target_value}")
+            for i,pn in enumerate(pv_name):
+                self.log_event(f"Dry run: would move {pn} to {target_value[i]}")
             return True
-        caput(pv_name, target_value, wait=True, timeout=30)
-        print(f"moving {pv_name} to {target_value}.")
-        self.log_event(f"moving {pv_name} to {target_value}")
-        time.sleep(1) #wait for the pv to update
-        self.check_motor_pv(pv_name, target_value)
+        else:
+            for i,pn in enumerate(pv_name):
+                caput(pn, target_value[i], wait=True, timeout=30)
+                self.log_event(f"moving {pn} to {target_value[i]}")
+                time.sleep(1) #wait for the pv to update
+                self.check_motor_pv(pn, target_value[i])
+            return True
+
+    def get_fn(self, scanloc=None):
+        """generate the filename based on sample name, robot position and scan location"""
         if scanloc != None:
             self.fn = f"{self.pre_name}{self.sample}_robpos{self.robpos}_{scanloc}{self.end_name}"
             return self.fn
 
     def check_motor_pv(self, pv_name, target_value):
-        """check if the motor pv is at target value within tolerance"""
+        """check if the a/multiple motor pvs is at target value within tolerance"""
+        if len(pv_name) != len(target_value):
+            raise ValueError("Motor names and values length mismatch")
         if self.dry_run:
-            self.log_event(f"Dry run: would check {pv_name} for {target_value}")
+            for i,pn in enumerate(pv_name):
+                self.log_event(f"Dry run: would check {pn} for {target_value[i]}")
             return True
-        current_value = caget(pv_name)
-        if abs(current_value - target_value) > self.tol:
-            print(f"{pv_name} is not at target value.")
-            self.log_event(f"❌{pv_name} is at {current_value}, target is {target_value}, not at target")
-            self.save_log()
-            sys.exit(1)
-        else:
-            print(f"{pv_name} is at target value.")
-            self.log_event(f"✅{pv_name} is at {current_value}, target is {target_value}, at target")
-            return True
+        for i,pn in enumerate(pv_name):
+            current_value = caget(pn, wait=True, timeout=30)
+            time.sleep(0.1) #wait for the pv to update
+            if abs(current_value - target_value[i]) > self.tol:
+                self.log_event(f"❌{pn} is at {current_value}, target is {target_value[i]}, not at target")
+                self.save_log()
+                sys.exit(1)
+            else:
+                self.log_event(f"✅{pn} is at {current_value}, target is {target_value[i]}, at target")
+        return True
 
     def move_check_mult_mtrs(self, name, val, wt=None): 
         """move and check multiple motors given a list of names, values and optional wait times"""
@@ -128,10 +145,7 @@ class tomo_auto():
             if len(wt) != len(name):
                 raise ValueError("Motor names and wait times length mismatch")
         self.log_event("Begin check multiple motor positions")
-        for i,nm in enumerate(name):
-            self.move_motor_pv(nm, val[i])
-            time.sleep(wt[i]) if wt != None else time.sleep(1)
-            self.check_motor_pv(nm, val[i])
+        self.move_motor_pv(name, val)
         self.log_event("All required motors were moved to target positions")
 
     def change_str_pv(self, pv_name, target_str, wt=1):
@@ -157,20 +171,24 @@ class tomo_auto():
         else:
             value=str(input_str).strip()
         if value != target_str:
-            print("❌Input str for {pv_name} is not at target str.")
+            print(f"❌Input str for {pv_name} is not at target str.")
             self.log_event(f"❌{pv_name} is at {value}, target is {target_str}, not at target")
             self.save_log()
             sys.exit(1)
         return True
-
+    def check_beam(self):
+        if self.dry_run == True:
+            self.log_event(f"Dry run, check beam current")
+            
     def run_tomo(self):
         """run tomo scan command"""
         if self.dry_run:
             self.log_event(f"Dry run: would run command {self.cmd}")
+            return True
         result = subprocess.run(self.cmd)
         if result.returncode == 9:
-            print(f"✅ TomoScan {self.fn} completed.")
-            self.log_event(f"✅ TomoScan {self.fn} completed.")
+            print(f"✅TomoScan {self.fn} completed.")
+            self.log_event(f"✅TomoScan {self.fn} completed.")
             time.sleep(30) #wait for FDT to finish
         else:
             print(f"❌ TomoScan {self.fn} failed with return code {result.returncode}.")
@@ -185,43 +203,30 @@ if __name__ == "__main__":
     logpath = "log_auto_tomo.txt"
     dry_run = True
     tomo = tomo_auto(config_file, logpath, dry_run=dry_run)
-    Y_motors_names = tomo.pv_input["Robot Y mount"]["pv"] #list of pv names: Hexapod Y and hexabase Y
-    Y_motors_vals = tomo.pv_input["Robot Y mount"]["value"]
-    if len(Y_motors_names) != len(Y_motors_vals):
-        raise ValueError("Mount Y stages names and values length mismatch, check the json file")
-    rest_motors_names = tomo.pv_input["Robot mount rest motors"]["pv"] #list of pv names: Hexapod X, sample x,z
-    rest_motors_vals = tomo.pv_input["Robot mount rest motors"]["value"]
-    if len(rest_motors_names) != len(rest_motors_vals):
-        raise ValueError("Mount rest stages names and values length mismatch, check the json file")
-    scan_locs = ["bottom", "top", "center"]
+    Y_motors_names = tomo.pv_input["Robot_Y_mount"]["pv"] #list of pv names: Hexapod Y and hexabase Y
+    Y_motors_vals = tomo.pv_input["Robot_Y_mount"]["value"]
+    rest_motors_names = tomo.pv_input["Robot_mount_rest_motors"]["pv"] #list of pv names: Hexapod X, sample x,z
+    rest_motors_vals = tomo.pv_input["Robot_mount_rest_motors"]["value"]
+    scan_locs = ["Sample_bottom", "Sample_top", "Sample_middle"] #more locations, then need more in json file
 
     for i in range(len(tomo.sample_names)):
         tomo.current_sample(i)
         #check all pvs at mounting position
         tomo.move_check_mult_mtrs(Y_motors_names, Y_motors_vals)
         tomo.move_check_mult_mtrs(rest_motors_names, rest_motors_vals)
-        #robot mount sample
-        #place holder
-        #move Hexapod Y to first sample position (bottom), relative value
+        print("robot mounts")#robot mount sample
         for s in scan_locs:
-            c_val = tomo.get_pv_value(tomo.pv_input[s]["pv"])
-            target_val = c_val + tomo.pv_input[s]["value"]
-            fn = tomo.move_motor_pv(tomo.pv_input[s]["pv"], target_val, scanloc=s) #move stage and get filename
-            tomo.change_str_pv(tomo.pv_input["file_name_pv"]["pv"], fn, wt=1) #change file name pv
+            tomo.log_event(f"Start location {s}")
+            c_vals = tomo.get_pv_value(tomo.pv_input[s]["pv"])
+            target_vals = [c_val + r_val for c_val, r_val in zip(c_vals, tomo.pv_input[s]["value"])]
+            fn = tomo.get_fn(scanloc=s) #generate file name
+            tomo.change_str_pv(tomo.pv_input["filename_entry"]["pv"], fn, wt=1) #change file name pv
             tomo.run_tomo()
-
-
-
-
-
-        tomo.check_mount_pvs(normtime=1, hexay=2, basey=60)
-        #robot sample exchange
+        tomo.move_check_mult_mtrs(Y_motors_names, Y_motors_vals)
+        tomo.move_check_mult_mtrs(rest_motors_names, rest_motors_vals)        
+        tomo.log_event('robot unmount/exchange')#robot sample exchange
         #place holder
         #move robot to different scan positions
-        tomo.move_motor_pv(tomo.pv_input["robot_pv"]["value"], tomo.robs[i])
-        tomo.change_str_pv(tomo.pv_input["file_name_pv"]["value"], fn)
-        tomo.run_tomo(tomo.cmd)
         tomo.save_log()
     print("All scans completed.")
-'''
-            
+

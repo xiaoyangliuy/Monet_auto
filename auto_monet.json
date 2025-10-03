@@ -1,49 +1,79 @@
 {
-    "Hexapod X":{
-        "pv": "7bmbHXP:m2"
+    "beam_current":{
+        "pv": ""
     },
-    "Hexapod Y":{
-        "pv": "7bmbHXP:m3"
+    "Hexapod_X":{
+        "pv": ["7bmbHXP:m2"]
     },
-    "Hex Base Y":{
-        "pv": "7bmb1:m26"   
+    "Hexapod_Y":{
+        "pv": ["7bmbHXP:m3"]
     },
-    "Sample Theta":{
-        "pv": "7bmb1:aero:m3"
+    "Hex_Base_Y":{
+        "pv": ["7bmb1:m26"]  
     },
-    "Center 0 Deg":{
-        "pv": "7bmb1:m33"
+    "Sample_Theta":{
+        "pv": ["7bmb1:aero:m3"]
     },
-    "Center 90 Deg":{
-        "pv": "7bmb1:m34"
+    "Center_0_Deg":{
+        "pv": ["7bmb1:m33"]
     },
-    "Robot Y mount":{ 
+    "Center_90_Deg":{
+        "pv": ["7bmb1:m34"]
+    },
+    "Robot_Y_mount":{ 
         "pv": ["7bmb1:m26","7bmbHXP:m3"],
-        "value": [100.6,0.0]
+        "value": [100.6,0.0], 
+        "comment": "absolute motor value"
     },
-    "Robot mount rest motors":{
-        "pv": ["7bmbHXP:m2","7bmb1:aero:m3","7bmb1:m33","7bmb1:m34"],
-        "value": [0,0,0.0,0.0,0.0]
+    "Robot_mount_rest_motors":{
+        "pv": ["7bmbHXP:m2","7bmbHXP:m3","7bmb1:aero:m3","7bmb1:m33","7bmb1:m34"],
+        "value": [0.0,0.0,0.0,0.0,0.0],
+        "comment": "absolute motor value for: Hexapod X, Hexapod Y, Sample theta, Center 0, Center 90"
     },
-    "Sample bottom":{
-        "pv": "7bmb1:m26",
-        "value": -50.0
+    "Sample_bottom":{
+        "pv": ["7bmb1:m26"],
+        "value": [-50.0],
+        "comment": "motor move delta value (relative)"
     },
-    "Sample middle":{
-        "pv": "7bmb1:m26",
-        "value": -55.0
+    "Sample_middle":{
+        "pv": ["7bmb1:m26"],
+        "value": [-55.0],
+        "comment": "motor move delta value (relative) as a list"
     },
-    "Sample top":{
+    "Sample_top":{
         "pv": ["7bmb1:m26","7bmbHXP:m3"],
-        "value": [-35.0,-10.0]
+        "value": [-35.0,-10.0],
+        "comment": "motor move delta value (relative)"
     },
     "sample_file":{
-        "value": "/data/2025-07-Evans-1009150/Monet_auto/sample_list.csv"
+        "value": "C:\\Research\\OneDrive - Argonne National Laboratory\\anl\\github\\Monet_auto\\Monet_auto\\sample_list.csv"
+    },
+    "filename_entry":{
+        "pv": "7bmtomo:TomoScan:FileName"
     },
     "scan_name_pre":{
         "value": "monet_"
     },
     "scan_name_end":{
         "value": "newimgsys_prop405_exp0p05"
+    },
+    "shutter_open":{
+        "pv": "7bma1:rShtrA:Open"
+    },
+    "shutter_close":{
+        "pv": "7bma1:rShtrA:Close"
+    },
+    "exposure_time":{
+        "pv": "7bmtomo:TomoScan:ExposureTime"
+    },
+    "single_image":{
+        "pv": "",
+        "value": ""
+    },
+    "image":{
+        "pv":""
+    },
+    "tomoscan_cmd":{
+        "value": ["tomoscan", "single", "--tomoscan-prefix", "7bmtomo:TomoScan:"]
     }
 }

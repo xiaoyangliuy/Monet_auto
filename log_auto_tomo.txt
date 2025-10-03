@@ -1,0 +1,304 @@
+2025-10-03 16:42:11 | ✅Match sample 61389_8_A and robot position 16
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_8_A_robpos16_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_8_A_robpos16_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_8_A_robpos16_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
+2025-10-03 16:42:11 | ✅Match sample 61389_16_A and robot position 18
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_16_A_robpos18_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_16_A_robpos18_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_16_A_robpos18_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
+2025-10-03 16:42:11 | ✅Match sample 61389_24_A and robot position 17
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_24_A_robpos17_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_24_A_robpos17_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61389_24_A_robpos17_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
+2025-10-03 16:42:11 | ✅Match sample 61115_4_A and robot position 11
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61115_4_A_robpos11_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61115_4_A_robpos11_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61115_4_A_robpos11_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
+2025-10-03 16:42:11 | ✅Match sample 61115_5_A and robot position 12
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61115_5_A_robpos12_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61115_5_A_robpos12_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61115_5_A_robpos12_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
+2025-10-03 16:42:11 | ✅Match sample 61090_1_A and robot position 13
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_1_A_robpos13_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_1_A_robpos13_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_1_A_robpos13_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
+2025-10-03 16:42:11 | ✅Match sample 61090_3_A and robot position 15
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_3_A_robpos15_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_3_A_robpos15_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_3_A_robpos15_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
+2025-10-03 16:42:11 | ✅Match sample 61090_5_A and robot position 14
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Start location Sample_bottom
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_5_A_robpos14_Sample_bottomnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_top
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would get value of 7bmbHXP:m3, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_5_A_robpos14_Sample_topnewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Start location Sample_middle
+2025-10-03 16:42:11 | Dry run: would get value of 7bmb1:m26, return arbitrary 100
+2025-10-03 16:42:11 | Dry run: would change 7bmtomo:TomoScan:FileName to monet_61090_5_A_robpos14_Sample_middlenewimgsys_prop405_exp0p05
+2025-10-03 16:42:11 | Dry run: would run command ['tomoscan', 'single', '--tomoscan-prefix', '7bmtomo:TomoScan:']
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m26 to 100.6
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | Begin check multiple motor positions
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m2 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmbHXP:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:aero:m3 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m33 to 0.0
+2025-10-03 16:42:11 | Dry run: would move 7bmb1:m34 to 0.0
+2025-10-03 16:42:11 | All required motors were moved to target positions
+2025-10-03 16:42:11 | robot unmount/exchange
+2025-10-03 16:42:11 | ===========================================================================
