@@ -37,6 +37,8 @@ class tomo_auto():
         self.exp = None
         self.sample = None
         self.robpos = None
+        self.motor_input = self.pv_input["Motor_input"]["pv"]
+        self.motor_readback = self.pv_input["Motor_readback"]["pv"]
 
     def read_sample(self, check=False):
         """read sample name and robot position from a pre-defined csv file,
@@ -73,6 +75,7 @@ class tomo_auto():
             return values #list of values
         else:
             for pn in pv_name:
+                pn = f"{pn}{self.motor_readback}"
                 value = caget(pn,wait=True, timeout=30)
                 self.log_event(f"{pn} is at {value}")
                 values.append(value)
@@ -106,7 +109,8 @@ class tomo_auto():
             return True
         else:
             for i,pn in enumerate(pv_name):
-                caput(pn, target_value[i], wait=True, timeout=30)
+                pn = f"{pn}{self.motor_input}"
+                caput(pn, target_value[i], wait=True, timeout=300)
                 self.log_event(f"moving {pn} to {target_value[i]}")
                 time.sleep(1) #wait for the pv to update
                 self.check_motor_pv(pn, target_value[i])
@@ -127,6 +131,7 @@ class tomo_auto():
                 self.log_event(f"Dry run: would check {pn} for {target_value[i]}")
             return True
         for i,pn in enumerate(pv_name):
+            pn = f"{pn}{self.motor_readback}"
             current_value = caget(pn, wait=True, timeout=30)
             time.sleep(0.1) #wait for the pv to update
             if abs(current_value - target_value[i]) > self.tol:
@@ -198,35 +203,5 @@ class tomo_auto():
         return True
 
 if __name__ == "__main__":
-    os.chdir("C:/Research/OneDrive - Argonne National Laboratory/anl/github/Monet_auto/Monet_auto")
-    config_file = "auto_monet.json"
-    logpath = "log_auto_tomo.txt"
-    dry_run = True
-    tomo = tomo_auto(config_file, logpath, dry_run=dry_run)
-    Y_motors_names = tomo.pv_input["Robot_Y_mount"]["pv"] #list of pv names: Hexapod Y and hexabase Y
-    Y_motors_vals = tomo.pv_input["Robot_Y_mount"]["value"]
-    rest_motors_names = tomo.pv_input["Robot_mount_rest_motors"]["pv"] #list of pv names: Hexapod X, sample x,z
-    rest_motors_vals = tomo.pv_input["Robot_mount_rest_motors"]["value"]
-    scan_locs = ["Sample_bottom", "Sample_top", "Sample_middle"] #more locations, then need more in json file
-
-    for i in range(len(tomo.sample_names)):
-        tomo.current_sample(i)
-        #check all pvs at mounting position
-        tomo.move_check_mult_mtrs(Y_motors_names, Y_motors_vals)
-        tomo.move_check_mult_mtrs(rest_motors_names, rest_motors_vals)
-        print("robot mounts")#robot mount sample
-        for s in scan_locs:
-            tomo.log_event(f"Start location {s}")
-            c_vals = tomo.get_pv_value(tomo.pv_input[s]["pv"])
-            target_vals = [c_val + r_val for c_val, r_val in zip(c_vals, tomo.pv_input[s]["value"])]
-            fn = tomo.get_fn(scanloc=s) #generate file name
-            tomo.change_str_pv(tomo.pv_input["filename_entry"]["pv"], fn, wt=1) #change file name pv
-            tomo.run_tomo()
-        tomo.move_check_mult_mtrs(Y_motors_names, Y_motors_vals)
-        tomo.move_check_mult_mtrs(rest_motors_names, rest_motors_vals)        
-        tomo.log_event('robot unmount/exchange')#robot sample exchange
-        #place holder
-        #move robot to different scan positions
-        tomo.save_log()
-    print("All scans completed.")
+    print("This is a module file for tomo_auto class")
 

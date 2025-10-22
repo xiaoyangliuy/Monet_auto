@@ -20,6 +20,12 @@
     "Center_90_Deg":{
         "pv": ["7bmb1:m34"]
     },
+    "Motor_input":{
+        "pv": ".Val"
+    },
+    "Motor_readback":{
+        "pv": ".RBV"
+    },
     "Robot_Y_mount":{ 
         "pv": ["7bmb1:m26","7bmbHXP:m3"],
         "value": [100.6,0.0], 
