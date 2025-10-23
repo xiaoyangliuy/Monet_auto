@@ -21,7 +21,7 @@
         "pv": ["7bmb1:m34"]
     },
     "Motor_input":{
-        "pv": ".Val"
+        "pv": ".VAL"
     },
     "Motor_readback":{
         "pv": ".RBV"
