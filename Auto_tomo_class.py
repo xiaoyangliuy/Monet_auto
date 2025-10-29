@@ -116,12 +116,14 @@ class tomo_auto():
                 self.check_motor_pv(pn, target_value[i])
             return True
 
-    def get_fn(self, scanloc=None):
+    def get_fn(self, motor=None, scanloc=None):
         """generate the filename based on sample name, robot position and scan location"""
-        if scanloc != None:
+        if scanloc != None and motor == None:
             self.fn = f"{self.pre_name}{self.sample}_robpos{self.robpos}_{scanloc}{self.end_name}"
-            return self.fn
-
+        elif scanloc != None and motor != None:
+            self.fn = f"{self.pre_name}{self.sample}_robpos{self.robpos}_{motor}{scanloc}{self.end_name}"
+        return self.fn
+    
     def check_motor_pv(self, pv_name, target_value):
         """check if the a/multiple motor pvs is at target value within tolerance"""
         if len(pv_name) != len(target_value):
@@ -161,7 +163,7 @@ class tomo_auto():
         caput(pv_name, target_str, wait=True, timeout=30)
         time.sleep(wt) #wait for the pv str to update
         print(f"move {pv_name} to {target_str}.")
-        self.log_event(f"move {pv_name} to {target_str}")
+        self.log_event(f"change {pv_name} to {target_str}")
         self.check_str_pv(pv_name, target_str)
         return True
 

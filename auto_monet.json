@@ -28,7 +28,7 @@
     },
     "Robot_Y_mount":{ 
         "pv": ["7bmb1:m26","7bmbHXP:m3"],
-        "value": [100.6,0.0], 
+        "value": [46.0,0.0], 
         "comment": "absolute motor value"
     },
     "Robot_mount_rest_motors":{
@@ -38,18 +38,23 @@
     },
     "Sample_bottom":{
         "pv": ["7bmb1:m26"],
-        "value": [-50.0],
+        "value": [-0.0],
         "comment": "motor move delta value (relative)"
     },
     "Sample_middle":{
         "pv": ["7bmb1:m26"],
-        "value": [-55.0],
+        "value": [-75.0],
         "comment": "motor move delta value (relative) as a list"
     },
     "Sample_top":{
-        "pv": ["7bmb1:m26","7bmbHXP:m3"],
-        "value": [-35.0,-10.0],
+        "pv": ["7bmb1:m26"],
+        "value": [-75.0],
         "comment": "motor move delta value (relative)"
+    },
+    "sample_move_step":{
+        "pv": ["7bmb1:m26"],
+        "value": [10],
+        "comment": "this is for experiment moving same steps and taking multiple scans"
     },
     "sample_file":{
         "value": "C:\\Research\\OneDrive - Argonne National Laboratory\\anl\\github\\Monet_auto\\Monet_auto\\sample_list.csv"
@@ -61,7 +66,7 @@
         "value": "monet_"
     },
     "scan_name_end":{
-        "value": "newimgsys_prop405_exp0p05"
+        "value": "prop420_exp0p05"
     },
     "shutter_open":{
         "pv": "7bma1:rShtrA:Open"
