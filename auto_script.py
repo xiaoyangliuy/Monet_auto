@@ -22,6 +22,10 @@ for i in range(len(tomo.sample_names)):
     fn = tomo.get_fn(scanloc=s) #generate file name    
     tomo.change_str_pv(tomo.pv_input["filename_entry"]["pv"], fn, wt=2) #change file name pv
     for s in scan_locs:
+        if i == 17 and s == "Sample_top":
+            pass
+        if i == 18 and s == "Sample_bottom":
+            pass
         tomo.log_event(f"Start location {s}")
         c_vals = tomo.get_pv_value(tomo.pv_input[s]["pv"])
         target_vals = [c_val + r_val for c_val, r_val in zip(c_vals, tomo.pv_input[s]["value"])]
