@@ -53,7 +53,7 @@
     },
     "sample_move_step":{
         "pv": ["7bmb1:m26"],
-        "value": [10],
+        "value": -10,
         "comment": "this is for experiment moving same steps and taking multiple scans"
     },
     "sample_file":{
@@ -66,7 +66,7 @@
         "value": "monet_"
     },
     "scan_name_end":{
-        "value": "_prop420_exp0p07"
+        "value": "_prop420_exp0p05"
     },
     "shutter_open":{
         "pv": "7bma1:rShtrA:Open"
