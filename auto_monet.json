@@ -37,18 +37,18 @@
         "comment": "absolute motor value for: Hexapod X, Hexapod Y, Sample theta, Center 0, Center 90"
     },
     "Sample_bottom":{
-        "pv": ["7bmb1:m26"],
-        "value": [-0.0],
+        "pv": "7bmb1:m26",
+        "value": -0.0,
         "comment": "motor move delta value (relative)"
     },
     "Sample_middle":{
-        "pv": ["7bmb1:m26"],
-        "value": [-75.0],
+        "pv": "7bmb1:m26",
+        "value": -75.0,
         "comment": "motor move delta value (relative) as a list"
     },
     "Sample_top":{
-        "pv": ["7bmb1:m26"],
-        "value": [-75.0],
+        "pv": "7bmb1:m26",
+        "value": -75.0,
         "comment": "motor move delta value (relative)"
     },
     "sample_move_step":{
@@ -57,7 +57,7 @@
         "comment": "this is for experiment moving same steps and taking multiple scans"
     },
     "sample_file":{
-        "value": "C:\\Research\\OneDrive - Argonne National Laboratory\\anl\\github\\Monet_auto\\Monet_auto\\sample_list.csv"
+        "value": "/home/beams/7BMB/Desktop/monet/Monet_auto/sample_list.csv"
     },
     "filename_entry":{
         "pv": "7bmtomo:TomoScan:FileName"
@@ -66,7 +66,7 @@
         "value": "monet_"
     },
     "scan_name_end":{
-        "value": "prop420_exp0p05"
+        "value": "_prop420_exp0p07"
     },
     "shutter_open":{
         "pv": "7bma1:rShtrA:Open"
@@ -85,6 +85,6 @@
         "pv":""
     },
     "tomoscan_cmd":{
-        "value": ["tomoscan", "single", "--tomoscan-prefix", "7bmtomo:TomoScan:"]
+        "value": ["tomoscan", "single"]
     }
 }

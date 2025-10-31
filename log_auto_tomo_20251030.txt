@@ -1,0 +1,342 @@
+2025-10-30 13:14:19 | ✅Match sample 61389_5_A and robot position 1
+2025-10-30 13:14:19 | Robot will mount 1
+2025-10-30 13:15:07 | change 7bmtomo:TomoScan:FileName to monet_61389_5_A_robpos1_Sample_bottom_prop420_exp0p07
+2025-10-30 13:15:07 | Start location Sample_bottom
+2025-10-30 13:15:07 | 7bmb1:m26.RBV is at 46.000000000000014
+2025-10-30 13:15:07 | moving 7bmb1:m26 to 46.000000000000014
+2025-10-30 13:15:09 | ✅7bmb1:m26.RBV is at 46.000000000000014, target is 46.000000000000014, at target
+2025-10-30 13:19:37 | ❌ TomoScan monet_61389_5_A_robpos1_Sample_bottom_prop420_exp0p07 failed with return code 0.
+2025-10-30 13:19:37 | ===========================================================================
+2025-10-30 13:23:16 | ✅Match sample 61389_5_A and robot position 1
+2025-10-30 13:23:16 | Robot will mount 1
+2025-10-30 13:23:39 | change 7bmtomo:TomoScan:FileName to monet_61389_5_A_robpos1_Sample_bottom_prop420_exp0p07
+2025-10-30 13:23:39 | Start location Sample_bottom
+2025-10-30 13:23:40 | 7bmb1:m26.RBV is at 46.000000000000014
+2025-10-30 13:23:40 | moving 7bmb1:m26 to 46.000000000000014
+2025-10-30 13:23:41 | ✅7bmb1:m26.RBV is at 46.000000000000014, target is 46.000000000000014, at target
+2025-10-30 13:28:08 | ❌ TomoScan monet_61389_5_A_robpos1_Sample_bottom_prop420_exp0p07 failed with return code 0.
+2025-10-30 13:28:08 | ===========================================================================
+2025-10-30 13:37:09 | ✅Match sample 61389_5_A and robot position 1
+2025-10-30 13:37:09 | Robot will mount 1
+2025-10-30 13:37:57 | change 7bmtomo:TomoScan:FileName to monet_61389_5_A_robpos1_Sample_bottom_prop420_exp0p07
+2025-10-30 13:37:57 | Start location Sample_bottom
+2025-10-30 13:37:58 | 7bmb1:m26.RBV is at 46.0005
+2025-10-30 13:37:58 | moving 7bmb1:m26 to 46.0005
+2025-10-30 13:37:59 | ✅7bmb1:m26.RBV is at 46.0005, target is 46.0005, at target
+2025-10-30 13:42:27 | ✅TomoScan monet_61389_5_A_robpos1_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 13:42:59 | change 7bmtomo:TomoScan:FileName to monet_61389_5_A_robpos1_Sample_middle_prop420_exp0p07
+2025-10-30 13:42:59 | Start location Sample_middle
+2025-10-30 13:42:59 | 7bmb1:m26.RBV is at 46.0005
+2025-10-30 13:44:21 | moving 7bmb1:m26 to -28.999499999999998
+2025-10-30 13:44:23 | ✅7bmb1:m26.RBV is at -28.999899999999997, target is -28.999499999999998, at target
+2025-10-30 13:48:51 | ✅TomoScan monet_61389_5_A_robpos1_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 13:49:23 | change 7bmtomo:TomoScan:FileName to monet_61389_5_A_robpos1_Sample_top_prop420_exp0p07
+2025-10-30 13:49:23 | Start location Sample_top
+2025-10-30 13:49:23 | 7bmb1:m26.RBV is at -28.999899999999997
+2025-10-30 13:50:45 | moving 7bmb1:m26 to -103.9999
+2025-10-30 13:50:47 | ✅7bmb1:m26.RBV is at -103.99959999999999, target is -103.9999, at target
+2025-10-30 13:55:15 | ✅TomoScan monet_61389_5_A_robpos1_Sample_top_prop420_exp0p07 completed.
+2025-10-30 13:55:45 | robot unmount/exchange
+2025-10-30 13:56:03 | ===========================================================================
+2025-10-30 13:56:03 | ✅Match sample 61389_7_A and robot position 2
+2025-10-30 13:56:03 | Robot will mount 2
+2025-10-30 13:56:24 | change 7bmtomo:TomoScan:FileName to monet_61389_7_A_robpos2_Sample_bottom_prop420_exp0p07
+2025-10-30 13:56:24 | Start location Sample_bottom
+2025-10-30 13:56:24 | 7bmb1:m26.RBV is at -68.44109999999999
+2025-10-30 13:57:46 | moving 7bmb1:m26 to -68.44109999999999
+2025-10-30 13:57:47 | ❌7bmb1:m26.RBV is at -67.7364, target is -68.44109999999999, not at target
+2025-10-30 13:57:47 | ===========================================================================
+2025-10-30 14:14:59 | ✅Match sample 61389_7_A and robot position 2
+2025-10-30 14:14:59 | Robot will mount 2
+2025-10-30 14:15:47 | change 7bmtomo:TomoScan:FileName to monet_61389_7_A_robpos2_Sample_bottom_prop420_exp0p07
+2025-10-30 14:15:47 | Start location Sample_bottom
+2025-10-30 14:15:47 | 7bmb1:m26.RBV is at 46.000000000000014
+2025-10-30 14:15:47 | moving 7bmb1:m26 to 46.000000000000014
+2025-10-30 14:15:48 | ✅7bmb1:m26.RBV is at 46.000000000000014, target is 46.000000000000014, at target
+2025-10-30 14:20:17 | ✅TomoScan monet_61389_7_A_robpos2_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 14:20:49 | change 7bmtomo:TomoScan:FileName to monet_61389_7_A_robpos2_Sample_middle_prop420_exp0p07
+2025-10-30 14:20:49 | Start location Sample_middle
+2025-10-30 14:20:49 | 7bmb1:m26.RBV is at 46.000000000000014
+2025-10-30 14:22:12 | moving 7bmb1:m26 to -28.999999999999986
+2025-10-30 14:22:13 | ❌7bmb1:m26.RBV is at -29.001999999999995, target is -28.999999999999986, not at target
+2025-10-30 14:22:13 | ===========================================================================
+2025-10-30 14:30:57 | ✅Match sample 61389_7_A and robot position 2
+2025-10-30 14:30:57 | Robot will mount 2
+2025-10-30 14:31:45 | change 7bmtomo:TomoScan:FileName to monet_61389_7_A_robpos2_Sample_bottom_prop420_exp0p07
+2025-10-30 14:31:45 | Start location Sample_bottom
+2025-10-30 14:31:45 | 7bmb1:m26.RBV is at 46.00010000000002
+2025-10-30 14:31:45 | moving 7bmb1:m26 to 46.00010000000002
+2025-10-30 14:31:47 | ✅7bmb1:m26.RBV is at 46.00010000000002, target is 46.00010000000002, at target
+2025-10-30 14:36:15 | ✅TomoScan monet_61389_7_A_robpos2_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 14:36:47 | change 7bmtomo:TomoScan:FileName to monet_61389_7_A_robpos2_Sample_middle_prop420_exp0p07
+2025-10-30 14:36:47 | Start location Sample_middle
+2025-10-30 14:36:47 | 7bmb1:m26.RBV is at 46.00010000000002
+2025-10-30 14:38:10 | moving 7bmb1:m26 to -28.999899999999982
+2025-10-30 14:38:11 | ✅7bmb1:m26.RBV is at -29.002899999999997, target is -28.999899999999982, at target
+2025-10-30 14:42:39 | ✅TomoScan monet_61389_7_A_robpos2_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 14:43:11 | change 7bmtomo:TomoScan:FileName to monet_61389_7_A_robpos2_Sample_top_prop420_exp0p07
+2025-10-30 14:43:11 | Start location Sample_top
+2025-10-30 14:43:11 | 7bmb1:m26.RBV is at -29.002899999999997
+2025-10-30 14:44:33 | moving 7bmb1:m26 to -104.0029
+2025-10-30 14:44:35 | ✅7bmb1:m26.RBV is at -104.0024, target is -104.0029, at target
+2025-10-30 14:49:02 | ✅TomoScan monet_61389_7_A_robpos2_Sample_top_prop420_exp0p07 completed.
+2025-10-30 14:49:32 | robot unmount/exchange
+2025-10-30 14:50:02 | ===========================================================================
+2025-10-30 15:19:43 | ✅Match sample 61389_4_A and robot position 3
+2025-10-30 15:19:43 | Robot will mount 3
+2025-10-30 15:20:12 | change 7bmtomo:TomoScan:FileName to monet_61389_4_A_robpos3_Sample_bottom_prop420_exp0p07
+2025-10-30 15:20:12 | Start location Sample_bottom
+2025-10-30 15:20:13 | 7bmb1:m26.RBV is at 46.00010000000002
+2025-10-30 15:20:13 | moving 7bmb1:m26 to 46.00010000000002
+2025-10-30 15:20:14 | ✅7bmb1:m26.RBV is at 46.00010000000002, target is 46.00010000000002, at target
+2025-10-30 15:24:42 | ✅TomoScan monet_61389_4_A_robpos3_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 15:25:14 | change 7bmtomo:TomoScan:FileName to monet_61389_4_A_robpos3_Sample_middle_prop420_exp0p07
+2025-10-30 15:25:14 | Start location Sample_middle
+2025-10-30 15:25:14 | 7bmb1:m26.RBV is at 46.00010000000002
+2025-10-30 15:26:37 | moving 7bmb1:m26 to -28.999899999999982
+2025-10-30 15:26:38 | ✅7bmb1:m26.RBV is at -29.002199999999988, target is -28.999899999999982, at target
+2025-10-30 15:31:06 | ✅TomoScan monet_61389_4_A_robpos3_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 15:31:38 | change 7bmtomo:TomoScan:FileName to monet_61389_4_A_robpos3_Sample_top_prop420_exp0p07
+2025-10-30 15:31:38 | Start location Sample_top
+2025-10-30 15:31:38 | 7bmb1:m26.RBV is at -29.002199999999988
+2025-10-30 15:33:00 | moving 7bmb1:m26 to -104.00219999999999
+2025-10-30 15:33:02 | ✅7bmb1:m26.RBV is at -104.00219999999999, target is -104.00219999999999, at target
+2025-10-30 15:37:29 | ✅TomoScan monet_61389_4_A_robpos3_Sample_top_prop420_exp0p07 completed.
+2025-10-30 15:37:59 | robot unmount/exchange
+2025-10-30 15:41:17 | ===========================================================================
+2025-10-30 15:41:17 | ✅Match sample 61389_23_A and robot position 4
+2025-10-30 15:41:17 | Robot will mount 4
+2025-10-30 15:41:46 | change 7bmtomo:TomoScan:FileName to monet_61389_23_A_robpos4_Sample_bottom_prop420_exp0p07
+2025-10-30 15:41:46 | Start location Sample_bottom
+2025-10-30 15:41:46 | 7bmb1:m26.RBV is at 45.999700000000004
+2025-10-30 15:41:46 | moving 7bmb1:m26 to 45.999700000000004
+2025-10-30 15:41:48 | ✅7bmb1:m26.RBV is at 45.999700000000004, target is 45.999700000000004, at target
+2025-10-30 15:46:04 | ✅TomoScan monet_61389_23_A_robpos4_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 15:46:36 | change 7bmtomo:TomoScan:FileName to monet_61389_23_A_robpos4_Sample_middle_prop420_exp0p07
+2025-10-30 15:46:36 | Start location Sample_middle
+2025-10-30 15:46:36 | 7bmb1:m26.RBV is at 45.999700000000004
+2025-10-30 15:47:59 | moving 7bmb1:m26 to -29.000299999999996
+2025-10-30 15:48:00 | ✅7bmb1:m26.RBV is at -29.002599999999987, target is -29.000299999999996, at target
+2025-10-30 15:52:18 | ✅TomoScan monet_61389_23_A_robpos4_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 15:52:50 | change 7bmtomo:TomoScan:FileName to monet_61389_23_A_robpos4_Sample_top_prop420_exp0p07
+2025-10-30 15:52:50 | Start location Sample_top
+2025-10-30 15:52:50 | 7bmb1:m26.RBV is at -29.002599999999987
+2025-10-30 15:54:12 | moving 7bmb1:m26 to -104.00259999999999
+2025-10-30 15:54:14 | ✅7bmb1:m26.RBV is at -104.00219999999999, target is -104.00259999999999, at target
+2025-10-30 15:58:32 | ✅TomoScan monet_61389_23_A_robpos4_Sample_top_prop420_exp0p07 completed.
+2025-10-30 15:59:02 | robot unmount/exchange
+2025-10-30 16:02:20 | ===========================================================================
+2025-10-30 16:02:20 | ✅Match sample 61115_1_A and robot position 5
+2025-10-30 16:02:20 | Robot will mount 5
+2025-10-30 16:02:49 | change 7bmtomo:TomoScan:FileName to monet_61115_1_A_robpos5_Sample_bottom_prop420_exp0p07
+2025-10-30 16:02:49 | Start location Sample_bottom
+2025-10-30 16:02:49 | 7bmb1:m26.RBV is at 46.00020000000002
+2025-10-30 16:02:49 | moving 7bmb1:m26 to 46.00020000000002
+2025-10-30 16:02:51 | ✅7bmb1:m26.RBV is at 46.00020000000002, target is 46.00020000000002, at target
+2025-10-30 16:07:09 | ✅TomoScan monet_61115_1_A_robpos5_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 16:07:41 | change 7bmtomo:TomoScan:FileName to monet_61115_1_A_robpos5_Sample_middle_prop420_exp0p07
+2025-10-30 16:07:41 | Start location Sample_middle
+2025-10-30 16:07:41 | 7bmb1:m26.RBV is at 46.00020000000002
+2025-10-30 16:09:04 | moving 7bmb1:m26 to -28.99979999999998
+2025-10-30 16:09:05 | ✅7bmb1:m26.RBV is at -29.001299999999986, target is -28.99979999999998, at target
+2025-10-30 16:13:23 | ✅TomoScan monet_61115_1_A_robpos5_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 16:13:55 | change 7bmtomo:TomoScan:FileName to monet_61115_1_A_robpos5_Sample_top_prop420_exp0p07
+2025-10-30 16:13:55 | Start location Sample_top
+2025-10-30 16:13:55 | 7bmb1:m26.RBV is at -29.001299999999986
+2025-10-30 16:15:17 | moving 7bmb1:m26 to -104.00129999999999
+2025-10-30 16:15:19 | ✅7bmb1:m26.RBV is at -104.0017, target is -104.00129999999999, at target
+2025-10-30 16:19:36 | ✅TomoScan monet_61115_1_A_robpos5_Sample_top_prop420_exp0p07 completed.
+2025-10-30 16:20:06 | robot unmount/exchange
+2025-10-30 16:23:24 | ===========================================================================
+2025-10-30 16:23:24 | ✅Match sample 61389_15_A and robot position 6
+2025-10-30 16:23:24 | Robot will mount 6
+2025-10-30 16:23:53 | change 7bmtomo:TomoScan:FileName to monet_61389_15_A_robpos6_Sample_bottom_prop420_exp0p07
+2025-10-30 16:23:53 | Start location Sample_bottom
+2025-10-30 16:23:53 | 7bmb1:m26.RBV is at 45.999700000000004
+2025-10-30 16:23:53 | moving 7bmb1:m26 to 45.999700000000004
+2025-10-30 16:23:55 | ✅7bmb1:m26.RBV is at 45.999700000000004, target is 45.999700000000004, at target
+2025-10-30 16:28:12 | ✅TomoScan monet_61389_15_A_robpos6_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 16:28:44 | change 7bmtomo:TomoScan:FileName to monet_61389_15_A_robpos6_Sample_middle_prop420_exp0p07
+2025-10-30 16:28:44 | Start location Sample_middle
+2025-10-30 16:28:44 | 7bmb1:m26.RBV is at 45.999700000000004
+2025-10-30 16:30:07 | moving 7bmb1:m26 to -29.000299999999996
+2025-10-30 16:30:08 | ✅7bmb1:m26.RBV is at -29.001899999999992, target is -29.000299999999996, at target
+2025-10-30 16:34:24 | ✅TomoScan monet_61389_15_A_robpos6_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 16:34:56 | change 7bmtomo:TomoScan:FileName to monet_61389_15_A_robpos6_Sample_top_prop420_exp0p07
+2025-10-30 16:34:56 | Start location Sample_top
+2025-10-30 16:34:56 | 7bmb1:m26.RBV is at -29.001899999999992
+2025-10-30 16:36:18 | moving 7bmb1:m26 to -104.00189999999999
+2025-10-30 16:36:19 | ✅7bmb1:m26.RBV is at -104.00219999999999, target is -104.00189999999999, at target
+2025-10-30 16:40:37 | ✅TomoScan monet_61389_15_A_robpos6_Sample_top_prop420_exp0p07 completed.
+2025-10-30 16:41:07 | robot unmount/exchange
+2025-10-30 16:44:24 | ===========================================================================
+2025-10-30 16:44:24 | ✅Match sample 61389_13_A and robot position 7
+2025-10-30 16:44:24 | Robot will mount 7
+2025-10-30 16:44:54 | change 7bmtomo:TomoScan:FileName to monet_61389_13_A_robpos7_Sample_bottom_prop420_exp0p07
+2025-10-30 16:44:54 | Start location Sample_bottom
+2025-10-30 16:44:54 | 7bmb1:m26.RBV is at 45.9996
+2025-10-30 16:44:54 | moving 7bmb1:m26 to 45.9996
+2025-10-30 16:44:56 | ✅7bmb1:m26.RBV is at 45.9996, target is 45.9996, at target
+2025-10-30 16:49:14 | ✅TomoScan monet_61389_13_A_robpos7_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 16:49:46 | change 7bmtomo:TomoScan:FileName to monet_61389_13_A_robpos7_Sample_middle_prop420_exp0p07
+2025-10-30 16:49:46 | Start location Sample_middle
+2025-10-30 16:49:46 | 7bmb1:m26.RBV is at 45.9996
+2025-10-30 16:51:08 | moving 7bmb1:m26 to -29.0004
+2025-10-30 16:51:10 | ✅7bmb1:m26.RBV is at -29.00099999999999, target is -29.0004, at target
+2025-10-30 16:55:27 | ✅TomoScan monet_61389_13_A_robpos7_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 16:55:59 | change 7bmtomo:TomoScan:FileName to monet_61389_13_A_robpos7_Sample_top_prop420_exp0p07
+2025-10-30 16:55:59 | Start location Sample_top
+2025-10-30 16:55:59 | 7bmb1:m26.RBV is at -29.00099999999999
+2025-10-30 16:57:22 | moving 7bmb1:m26 to -104.00099999999999
+2025-10-30 16:57:23 | ✅7bmb1:m26.RBV is at -104.0007, target is -104.00099999999999, at target
+2025-10-30 17:01:41 | ✅TomoScan monet_61389_13_A_robpos7_Sample_top_prop420_exp0p07 completed.
+2025-10-30 17:02:11 | robot unmount/exchange
+2025-10-30 17:05:30 | ===========================================================================
+2025-10-30 17:05:30 | ✅Match sample 61389_11_A and robot position 8
+2025-10-30 17:05:30 | Robot will mount 8
+2025-10-30 17:05:59 | change 7bmtomo:TomoScan:FileName to monet_61389_11_A_robpos8_Sample_bottom_prop420_exp0p07
+2025-10-30 17:05:59 | Start location Sample_bottom
+2025-10-30 17:05:59 | 7bmb1:m26.RBV is at 45.999700000000004
+2025-10-30 17:05:59 | moving 7bmb1:m26 to 45.999700000000004
+2025-10-30 17:06:01 | ✅7bmb1:m26.RBV is at 45.999700000000004, target is 45.999700000000004, at target
+2025-10-30 17:10:18 | ✅TomoScan monet_61389_11_A_robpos8_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 17:10:50 | change 7bmtomo:TomoScan:FileName to monet_61389_11_A_robpos8_Sample_middle_prop420_exp0p07
+2025-10-30 17:10:50 | Start location Sample_middle
+2025-10-30 17:10:50 | 7bmb1:m26.RBV is at 45.999700000000004
+2025-10-30 17:12:13 | moving 7bmb1:m26 to -29.000299999999996
+2025-10-30 17:12:14 | ✅7bmb1:m26.RBV is at -29.002899999999997, target is -29.000299999999996, at target
+2025-10-30 17:16:32 | ✅TomoScan monet_61389_11_A_robpos8_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 17:17:04 | change 7bmtomo:TomoScan:FileName to monet_61389_11_A_robpos8_Sample_top_prop420_exp0p07
+2025-10-30 17:17:04 | Start location Sample_top
+2025-10-30 17:17:04 | 7bmb1:m26.RBV is at -29.002899999999997
+2025-10-30 17:18:26 | moving 7bmb1:m26 to -104.0029
+2025-10-30 17:18:28 | ✅7bmb1:m26.RBV is at -104.0028, target is -104.0029, at target
+2025-10-30 17:22:44 | ✅TomoScan monet_61389_11_A_robpos8_Sample_top_prop420_exp0p07 completed.
+2025-10-30 17:23:14 | robot unmount/exchange
+2025-10-30 17:26:32 | ===========================================================================
+2025-10-30 17:29:18 | ✅Match sample 61389_20_A and robot position 10
+2025-10-30 17:29:18 | Robot will mount 10
+2025-10-30 17:29:47 | change 7bmtomo:TomoScan:FileName to monet_61389_20_A_robpos10_Sample_bottom_prop420_exp0p07
+2025-10-30 17:29:47 | Start location Sample_bottom
+2025-10-30 17:29:47 | 7bmb1:m26.RBV is at 45.9996
+2025-10-30 17:29:47 | moving 7bmb1:m26 to 45.9996
+2025-10-30 17:29:48 | ✅7bmb1:m26.RBV is at 45.9996, target is 45.9996, at target
+2025-10-30 17:34:06 | ✅TomoScan monet_61389_20_A_robpos10_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 17:34:38 | change 7bmtomo:TomoScan:FileName to monet_61389_20_A_robpos10_Sample_middle_prop420_exp0p07
+2025-10-30 17:34:38 | Start location Sample_middle
+2025-10-30 17:34:38 | 7bmb1:m26.RBV is at 45.9996
+2025-10-30 17:36:01 | moving 7bmb1:m26 to -29.0004
+2025-10-30 17:36:02 | ✅7bmb1:m26.RBV is at -29.002499999999998, target is -29.0004, at target
+2025-10-30 17:40:20 | ✅TomoScan monet_61389_20_A_robpos10_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 17:40:52 | change 7bmtomo:TomoScan:FileName to monet_61389_20_A_robpos10_Sample_top_prop420_exp0p07
+2025-10-30 17:40:52 | Start location Sample_top
+2025-10-30 17:40:52 | 7bmb1:m26.RBV is at -29.002499999999998
+2025-10-30 17:42:14 | moving 7bmb1:m26 to -104.0025
+2025-10-30 17:42:16 | ✅7bmb1:m26.RBV is at -104.00229999999999, target is -104.0025, at target
+2025-10-30 17:46:34 | ✅TomoScan monet_61389_20_A_robpos10_Sample_top_prop420_exp0p07 completed.
+2025-10-30 17:47:04 | robot unmount/exchange
+2025-10-30 17:50:21 | ===========================================================================
+2025-10-30 17:50:21 | ✅Match sample 61389_14_A and robot position 11
+2025-10-30 17:50:21 | Robot will mount 11
+2025-10-30 17:50:49 | change 7bmtomo:TomoScan:FileName to monet_61389_14_A_robpos11_Sample_bottom_prop420_exp0p07
+2025-10-30 17:50:49 | Start location Sample_bottom
+2025-10-30 17:50:49 | 7bmb1:m26.RBV is at 45.9996
+2025-10-30 17:50:49 | moving 7bmb1:m26 to 45.9996
+2025-10-30 17:50:51 | ✅7bmb1:m26.RBV is at 45.9996, target is 45.9996, at target
+2025-10-30 17:55:08 | ✅TomoScan monet_61389_14_A_robpos11_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 17:55:40 | change 7bmtomo:TomoScan:FileName to monet_61389_14_A_robpos11_Sample_middle_prop420_exp0p07
+2025-10-30 17:55:40 | Start location Sample_middle
+2025-10-30 17:55:40 | 7bmb1:m26.RBV is at 45.9996
+2025-10-30 17:57:02 | moving 7bmb1:m26 to -29.0004
+2025-10-30 17:57:04 | ✅7bmb1:m26.RBV is at -29.00099999999999, target is -29.0004, at target
+2025-10-30 18:01:21 | ✅TomoScan monet_61389_14_A_robpos11_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 18:01:53 | change 7bmtomo:TomoScan:FileName to monet_61389_14_A_robpos11_Sample_top_prop420_exp0p07
+2025-10-30 18:01:53 | Start location Sample_top
+2025-10-30 18:01:53 | 7bmb1:m26.RBV is at -29.00099999999999
+2025-10-30 18:03:15 | moving 7bmb1:m26 to -104.00099999999999
+2025-10-30 18:03:17 | ✅7bmb1:m26.RBV is at -104.00139999999999, target is -104.00099999999999, at target
+2025-10-30 18:07:34 | ✅TomoScan monet_61389_14_A_robpos11_Sample_top_prop420_exp0p07 completed.
+2025-10-30 18:08:04 | robot unmount/exchange
+2025-10-30 18:11:20 | ===========================================================================
+2025-10-30 18:11:20 | ✅Match sample 61389_19_A and robot position 12
+2025-10-30 18:11:20 | Robot will mount 12
+2025-10-30 18:11:48 | change 7bmtomo:TomoScan:FileName to monet_61389_19_A_robpos12_Sample_bottom_prop420_exp0p07
+2025-10-30 18:11:48 | Start location Sample_bottom
+2025-10-30 18:11:48 | 7bmb1:m26.RBV is at 46.0005
+2025-10-30 18:11:48 | moving 7bmb1:m26 to 46.0005
+2025-10-30 18:11:50 | ✅7bmb1:m26.RBV is at 46.0005, target is 46.0005, at target
+2025-10-30 18:16:07 | ✅TomoScan monet_61389_19_A_robpos12_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 18:16:39 | change 7bmtomo:TomoScan:FileName to monet_61389_19_A_robpos12_Sample_middle_prop420_exp0p07
+2025-10-30 18:16:39 | Start location Sample_middle
+2025-10-30 18:16:39 | 7bmb1:m26.RBV is at 46.0005
+2025-10-30 18:18:02 | moving 7bmb1:m26 to -28.999499999999998
+2025-10-30 18:18:03 | ✅7bmb1:m26.RBV is at -29.001499999999993, target is -28.999499999999998, at target
+2025-10-30 18:22:20 | ✅TomoScan monet_61389_19_A_robpos12_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 18:22:52 | change 7bmtomo:TomoScan:FileName to monet_61389_19_A_robpos12_Sample_top_prop420_exp0p07
+2025-10-30 18:22:52 | Start location Sample_top
+2025-10-30 18:22:52 | 7bmb1:m26.RBV is at -29.001499999999993
+2025-10-30 18:24:15 | moving 7bmb1:m26 to -104.0015
+2025-10-30 18:24:16 | ✅7bmb1:m26.RBV is at -104.0015, target is -104.0015, at target
+2025-10-30 18:28:34 | ✅TomoScan monet_61389_19_A_robpos12_Sample_top_prop420_exp0p07 completed.
+2025-10-30 18:29:04 | robot unmount/exchange
+2025-10-30 18:32:21 | ===========================================================================
+2025-10-30 18:32:21 | ✅Match sample 61389_12_A and robot position 13
+2025-10-30 18:32:21 | Robot will mount 13
+2025-10-30 18:32:51 | change 7bmtomo:TomoScan:FileName to monet_61389_12_A_robpos13_Sample_bottom_prop420_exp0p07
+2025-10-30 18:32:51 | Start location Sample_bottom
+2025-10-30 18:32:51 | 7bmb1:m26.RBV is at 45.99980000000001
+2025-10-30 18:32:51 | moving 7bmb1:m26 to 45.99980000000001
+2025-10-30 18:32:53 | ✅7bmb1:m26.RBV is at 45.99980000000001, target is 45.99980000000001, at target
+2025-10-30 18:37:11 | ✅TomoScan monet_61389_12_A_robpos13_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 18:37:43 | change 7bmtomo:TomoScan:FileName to monet_61389_12_A_robpos13_Sample_middle_prop420_exp0p07
+2025-10-30 18:37:43 | Start location Sample_middle
+2025-10-30 18:37:43 | 7bmb1:m26.RBV is at 45.99980000000001
+2025-10-30 18:39:06 | moving 7bmb1:m26 to -29.000199999999992
+2025-10-30 18:39:07 | ✅7bmb1:m26.RBV is at -29.0021, target is -29.000199999999992, at target
+2025-10-30 18:43:25 | ✅TomoScan monet_61389_12_A_robpos13_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 18:43:57 | change 7bmtomo:TomoScan:FileName to monet_61389_12_A_robpos13_Sample_top_prop420_exp0p07
+2025-10-30 18:43:57 | Start location Sample_top
+2025-10-30 18:43:57 | 7bmb1:m26.RBV is at -29.0021
+2025-10-30 18:45:19 | moving 7bmb1:m26 to -104.0021
+2025-10-30 18:45:21 | ✅7bmb1:m26.RBV is at -104.0016, target is -104.0021, at target
+2025-10-30 18:49:38 | ✅TomoScan monet_61389_12_A_robpos13_Sample_top_prop420_exp0p07 completed.
+2025-10-30 18:50:08 | robot unmount/exchange
+2025-10-30 18:53:27 | ===========================================================================
+2025-10-30 18:53:27 | ✅Match sample 61389_22_A and robot position 14
+2025-10-30 18:53:27 | Robot will mount 14
+2025-10-30 18:53:56 | change 7bmtomo:TomoScan:FileName to monet_61389_22_A_robpos14_Sample_bottom_prop420_exp0p07
+2025-10-30 18:53:56 | Start location Sample_bottom
+2025-10-30 18:53:56 | 7bmb1:m26.RBV is at 46.000000000000014
+2025-10-30 18:53:56 | moving 7bmb1:m26 to 46.000000000000014
+2025-10-30 18:53:58 | ✅7bmb1:m26.RBV is at 46.000000000000014, target is 46.000000000000014, at target
+2025-10-30 18:58:15 | ✅TomoScan monet_61389_22_A_robpos14_Sample_bottom_prop420_exp0p07 completed.
+2025-10-30 18:58:47 | change 7bmtomo:TomoScan:FileName to monet_61389_22_A_robpos14_Sample_middle_prop420_exp0p07
+2025-10-30 18:58:47 | Start location Sample_middle
+2025-10-30 18:58:47 | 7bmb1:m26.RBV is at 46.000000000000014
+2025-10-30 19:00:10 | moving 7bmb1:m26 to -28.999999999999986
+2025-10-30 19:00:11 | ✅7bmb1:m26.RBV is at -29.002499999999998, target is -28.999999999999986, at target
+2025-10-30 19:04:29 | ✅TomoScan monet_61389_22_A_robpos14_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 19:05:01 | change 7bmtomo:TomoScan:FileName to monet_61389_22_A_robpos14_Sample_top_prop420_exp0p07
+2025-10-30 19:05:01 | Start location Sample_top
+2025-10-30 19:05:01 | 7bmb1:m26.RBV is at -29.002499999999998
+2025-10-30 19:06:24 | moving 7bmb1:m26 to -104.0025
+2025-10-30 19:06:25 | ✅7bmb1:m26.RBV is at -104.0026, target is -104.0025, at target
+2025-10-30 19:10:41 | ✅TomoScan monet_61389_22_A_robpos14_Sample_top_prop420_exp0p07 completed.
+2025-10-30 19:11:11 | robot unmount/exchange
+2025-10-30 19:14:29 | ===========================================================================
+2025-10-30 19:32:26 | ✅Match sample 61389_10_A and robot position 18
+2025-10-30 19:32:26 | Robot will mount 18
+2025-10-30 19:32:54 | change 7bmtomo:TomoScan:FileName to monet_61389_10_A_robpos18_Sample_middle_prop420_exp0p07
+2025-10-30 19:32:54 | Start location Sample_middle
+2025-10-30 19:32:54 | 7bmb1:m26.RBV is at 45.9996
+2025-10-30 19:34:16 | moving 7bmb1:m26 to -29.0004
+2025-10-30 19:34:18 | ✅7bmb1:m26.RBV is at -29.00269999999999, target is -29.0004, at target
+2025-10-30 19:38:35 | ✅TomoScan monet_61389_10_A_robpos18_Sample_middle_prop420_exp0p07 completed.
+2025-10-30 19:39:07 | change 7bmtomo:TomoScan:FileName to monet_61389_10_A_robpos18_Sample_top_prop420_exp0p07
+2025-10-30 19:39:07 | Start location Sample_top
+2025-10-30 19:39:07 | 7bmb1:m26.RBV is at -29.00269999999999
+2025-10-30 19:40:29 | moving 7bmb1:m26 to -104.00269999999999
+2025-10-30 19:40:31 | ✅7bmb1:m26.RBV is at -104.00219999999999, target is -104.00269999999999, at target
+2025-10-30 19:44:49 | ✅TomoScan monet_61389_10_A_robpos18_Sample_top_prop420_exp0p07 completed.
+2025-10-30 19:45:19 | robot unmount/exchange
+2025-10-30 19:48:34 | ===========================================================================

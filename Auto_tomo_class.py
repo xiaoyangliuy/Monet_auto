@@ -1,5 +1,5 @@
 import json
-#from epics import caget, caput
+from epics import caget, caput
 import time
 import sys
 import subprocess
@@ -24,7 +24,7 @@ class tomo_auto():
         self._logpath = logpath
         self.log = []
         self.start_pos = 0.0
-        self.tol = 1e-3  # tolerance for position checking
+        self.tol = 0.1  # tolerance for position checking
         self.fn = None  # filename for tomo scan
         self.cmd = self.pv_input["tomoscan_cmd"]["value"]  # command to run tomo scan
         
@@ -74,12 +74,13 @@ class tomo_auto():
                 values.append(value)
             return values #list of values
         else:
-            for pn in pv_name:
-                pn = f"{pn}{self.motor_readback}"
-                value = caget(pn,wait=True, timeout=30)
-                self.log_event(f"{pn} is at {value}")
-                values.append(value)
-        return values
+            #for pn in pv_name:
+            pn = f"{pv_name}{self.motor_readback}"
+            value = caget(pn)
+            time.sleep(0.3)
+            self.log_event(f"{pn} is at {value}")
+            #values.append(value)
+        return value
     
     def log_event(self, event):
         """log an event with timestamp
@@ -101,19 +102,19 @@ class tomo_auto():
     def move_motor_pv(self, pv_name, target_value):
         """move a/multiple motor(s) pv to target value
         check if the motor pv is at target value within tolerance"""
-        if len(pv_name) != len(target_value):
-            raise ValueError("Motor names and values length mismatch")
+        #if len(pv_name) != len(target_value):
+        #    raise ValueError("Motor names and values length mismatch")
         if self.dry_run:
             for i,pn in enumerate(pv_name):
                 self.log_event(f"Dry run: would move {pn} to {target_value[i]}")
             return True
         else:
-            for i,pn in enumerate(pv_name):
-                pn = f"{pn}{self.motor_input}"
-                caput(pn, target_value[i], wait=True, timeout=300)
-                self.log_event(f"moving {pn} to {target_value[i]}")
-                time.sleep(1) #wait for the pv to update
-                self.check_motor_pv(pn, target_value[i])
+            #for i,pn in enumerate(pv_name):
+            pn = f"{pv_name}{self.motor_input}"
+            caput(pn, target_value, wait=True, timeout=600)
+            self.log_event(f"moving {pv_name} to {target_value}")
+            time.sleep(1) #wait for the pv to update
+            self.check_motor_pv(pv_name, target_value)
             return True
 
     def get_fn(self, motor=None, scanloc=None):
@@ -126,22 +127,22 @@ class tomo_auto():
     
     def check_motor_pv(self, pv_name, target_value):
         """check if the a/multiple motor pvs is at target value within tolerance"""
-        if len(pv_name) != len(target_value):
-            raise ValueError("Motor names and values length mismatch")
+        #if len(pv_name) != len(target_value):
+        #    raise ValueError("Motor names and values length mismatch")
         if self.dry_run:
             for i,pn in enumerate(pv_name):
                 self.log_event(f"Dry run: would check {pn} for {target_value[i]}")
             return True
-        for i,pn in enumerate(pv_name):
-            pn = f"{pn}{self.motor_readback}"
-            current_value = caget(pn, wait=True, timeout=30)
-            time.sleep(0.1) #wait for the pv to update
-            if abs(current_value - target_value[i]) > self.tol:
-                self.log_event(f"❌{pn} is at {current_value}, target is {target_value[i]}, not at target")
-                self.save_log()
-                sys.exit(1)
-            else:
-                self.log_event(f"✅{pn} is at {current_value}, target is {target_value[i]}, at target")
+        #for i,pn in enumerate(pv_name):
+        pn = f"{pv_name}{self.motor_readback}"
+        current_value = caget(pn)
+        time.sleep(0.3) #wait for the pv to update
+        if abs(current_value - target_value) > self.tol:
+            self.log_event(f"❌{pn} is at {current_value}, target is {target_value}, not at target")
+            self.save_log()
+            sys.exit(1)
+        else:
+            self.log_event(f"✅{pn} is at {current_value}, target is {target_value}, at target")
         return True
 
     def move_check_mult_mtrs(self, name, val, wt=None): 
@@ -193,15 +194,15 @@ class tomo_auto():
             self.log_event(f"Dry run: would run command {self.cmd}")
             return True
         result = subprocess.run(self.cmd)
-        if result.returncode == 9:
-            print(f"✅TomoScan {self.fn} completed.")
-            self.log_event(f"✅TomoScan {self.fn} completed.")
-            time.sleep(30) #wait for FDT to finish
-        else:
-            print(f"❌ TomoScan {self.fn} failed with return code {result.returncode}.")
-            self.log_event(f"❌ TomoScan {self.fn} failed with return code {result.returncode}.")
-            self.save_log()
-            sys.exit(1)
+        #if result.returncode == 9:
+        #    print(f"✅TomoScan {self.fn} completed.")
+        self.log_event(f"✅TomoScan {self.fn} completed.")
+        time.sleep(30) #wait for FDT to finish
+        #else:
+            #print(f"❌ TomoScan {self.fn} failed with return code {result.returncode}.")
+            #self.log_event(f"❌ TomoScan {self.fn} failed with return code {result.returncode}.")
+            #self.save_log()
+            #sys.exit(1)
         return True
 
 if __name__ == "__main__":
